@@ -1,3 +1,9 @@
 title: Vineel Pentrala
 description: Quantitative Researcher | Financial Engineering | C++ & Python
 theme: minima
+
+# links that appear on the top‑right nav bar
+header_pages:
+  - education.md
+  - experience.md
+  - activities.md

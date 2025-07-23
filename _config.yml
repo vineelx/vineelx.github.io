@@ -4,6 +4,11 @@ theme: minima
 
 # links that appear on the top‑right nav bar
 header_pages:
-  - education.md
-  - experience.md
+  - profile.md
   - activities.md
+
+github_username: vineelx
+
+author:
+  name: Vineel Pentrala
+  email: vineelpentrala@gmail.com

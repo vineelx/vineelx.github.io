@@ -3,6 +3,12 @@ layout: page
 title: Projects & Activities
 permalink: /activities/
 ---
+<!-- ### <span style="color:#607085;">Current Projects</span>
+<hr style="margin-top:0; margin-bottom:1em; border: 1px solid #607085;" />
+
+
+### <span style="color:#607085;">Past Projects</span>
+<hr style="margin-top:0; margin-bottom:1em; border: 1px solid #607085;" /> -->
 
 ### <span style="color:#2a7ae2;">Empirical Analysis of TSLA Microstructure Data</span> — Stevens Institute of Technology  
 - Analyzed Tesla tick‑level data to study liquidity, volatility, and informed trading.  

@@ -1,0 +1,14 @@
+# The big Lumia-style menu. Order here is the loop order;
+# each page shows its own item first, then the rest in this order.
+- key: home
+  title: home
+  url: /
+- key: work
+  title: work
+  url: /work/
+- key: experience
+  title: experience
+  url: /experience/
+- key: cv
+  title: cv
+  url: /resume.pdf

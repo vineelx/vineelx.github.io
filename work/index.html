@@ -1,0 +1,29 @@
+---
+layout: default
+title: Work
+nav: work
+is_section: true
+description: Trading systems and quantitative research by Vineel Pentrala, each with the result it produced.
+---
+<h1 class="sr-only">work</h1>
+<div class="pad wrap section stack" style="gap: 44px">
+{%- for s in site.data.projects %}
+<section class="stack">
+<h2 class="h2">{{ s.section }}</h2>
+<div class="tiles{% if s.items.size <= 2 %} wide{% endif %}">
+{%- for p in s.items %}
+<article class="tile" style="background: {{ p.color }}">
+<span class="num">{{ p.metric }}</span>
+<span style="display: flex; flex-direction: column; gap: 4px">
+<span class="ttl">{{ p.title }}</span>
+<span class="dsc">{{ p.stack }}{% if p.group %} · group project{% endif %} · {{ p.desc }}</span>
+{%- if p.code != "" or p.writeup != "" or p.report != "" %}
+<span class="lnk">{% if p.writeup != "" %}<a href="{{ p.writeup | relative_url }}">write-up</a>{% endif %}{% if p.code != "" %}<a href="{{ p.code }}">code</a>{% endif %}{% if p.report != "" %}<a href="{{ p.report | relative_url }}">report</a>{% endif %}</span>
+{%- endif %}
+</span>
+</article>
+{%- endfor %}
+</div>
+</section>
+{%- endfor %}
+</div>

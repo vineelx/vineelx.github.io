@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}">
+<meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ '/assets/img/headshot.jpg' | absolute_url }}">
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body>
+<div class="m">
+
+<div class="pad">{% if page.nav == 'home' %}<h1 class="app">vineel pentrala</h1>{% else %}<p class="app">vineel pentrala{% if page.nav != 'none' %} · {{ page.nav }}{% endif %}</p>{% endif %}</div>
+
+{% assign items = site.data.nav %}
+{% assign n = items | size %}
+{% assign start = 0 %}
+{% for it in items %}{% if it.key == page.nav %}{% assign start = forloop.index0 %}{% endif %}{% endfor %}
+<nav aria-label="Main" class="pivot pad">
+{%- for i in (1..n) -%}
+{%- assign j = start | plus: i | minus: 1 | modulo: n -%}
+{%- assign it = items[j] -%}
+<a href="{{ it.url | relative_url }}"{% if it.key == page.nav %} class="on"{% if page.is_section %} aria-current="page"{% endif %}{% endif %}>{{ it.title }}</a>
+{%- endfor -%}
+</nav>
+
+<main>
+{{ content }}
+</main>
+
+<footer class="pad appbar">
+<a href="{{ site.links.cv | relative_url }}">download cv</a>
+<a href="{{ site.links.github }}">github</a>
+<a href="{{ site.links.linkedin }}">linkedin</a>
+<a href="{{ site.links.email }}">email</a>
+<a href="{{ '/#contact' | relative_url }}">contact</a>
+</footer>
+
+</div>
+</body>
+</html>

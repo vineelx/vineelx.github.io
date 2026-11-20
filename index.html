@@ -1,0 +1,58 @@
+---
+layout: default
+nav: home
+is_section: true
+---
+<div class="pad wrap section row">
+
+<section class="home-about">
+<img class="photo" src="{{ '/assets/img/headshot-full.jpg' | relative_url }}" alt="Vineel Pentrala">
+<h2 class="h2">about</h2>
+<p class="light" style="margin: 0; font-size: 19px">I work where markets meet data: pricing models, market microstructure, and the analysis that tells you whether a price is wrong. I have an M.S. in Financial Engineering from Stevens, where I placed first among graduate students in the CME Trading Challenge, and a B.Tech. in Computer Science. Recently I priced a live Kalshi market against its order book and measured how much of TSLA's spread goes to informed traders. I'm looking for roles in the markets, on the development side or the trading side.</p>
+<nav aria-label="Links" class="biglinks">
+<a href="{{ site.links.cv | relative_url }}">download cv</a>
+<a href="{{ site.links.github }}">github</a>
+<a href="{{ site.links.linkedin }}">linkedin</a>
+<a href="{{ site.links.email }}">email</a>
+</nav>
+</section>
+
+<div class="home-right">
+
+<section class="stack">
+<h2 class="h2">now</h2>
+<div class="tiles small">
+{%- for t in site.data.now %}
+<a class="tile sm" href="{{ t.url | relative_url }}" style="background: {{ t.color }}"><span class="lbl">{{ t.label }}</span><span class="num">{{ t.big }}</span><span class="dsc">{{ t.small }}</span></a>
+{%- endfor %}
+</div>
+<a href="{{ '/work/' | relative_url }}" class="light" style="font-size: 20px">all projects →</a>
+</section>
+
+</div>
+
+<section style="width: 100%" class="stack">
+<h2 class="h2"><a href="{{ '/experience/' | relative_url }}" style="color: #1a1a1a">experience →</a></h2>
+<div class="inline-list">
+<span><strong>fund flow os</strong>  software engineer intern</span>
+<span><strong>rennod llc</strong>  financial engineer</span>
+<span><strong>stevens</strong>  research fellow</span>
+<span><strong>cantor fitzgerald</strong>  software engineer intern</span>
+</div>
+</section>
+
+<section class="stack" id="contact" style="width: 100%">
+<h2 class="h2">contact</h2>
+<form class="form" action="https://formspree.io/f/mldleqpp" method="POST">
+<label for="c-name">name</label>
+<input id="c-name" name="name" autocomplete="name" required>
+<label for="c-email">email</label>
+<input id="c-email" type="email" name="_replyto" autocomplete="email" required>
+<label for="c-msg">message</label>
+<textarea id="c-msg" name="message" rows="5" required></textarea>
+<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none">
+<button type="submit">send</button>
+</form>
+</section>
+
+</div>

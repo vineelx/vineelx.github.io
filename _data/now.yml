@@ -1,0 +1,22 @@
+# The small "now" tiles on the home page. Keep 4 items.
+# color must keep white text readable.
+- label: open to
+  big: any role in the markets
+  small: full-time · available now
+  color: "#c23400"
+  url: /#contact
+- label: education
+  big: MS Financial Engineering
+  small: Stevens Institute of Technology, Dec 2025
+  color: "#005a9e"
+  url: /experience/
+- label: now
+  big: Fund Flow OS
+  small: software engineer, building LLM-powered internal tools
+  color: "#107c10"
+  url: /experience/
+- label: latest project
+  big: "10/12"
+  small: Kalshi pricing model calls that moved toward fair value
+  color: "#5c2d91"
+  url: /work/

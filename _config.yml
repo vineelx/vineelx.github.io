@@ -1,14 +1,21 @@
 title: Vineel Pentrala
-description: Quant Finance | MS Financial Engineering | Tech
-theme: minima
-
-# links that appear on the top‑right nav bar
-header_pages:
-  - profile.md
-  - activities.md
-
-github_username: vineelx
+description: Vineel Pentrala builds trading systems and the research behind them, from order books and quoting engines to the pricing models that decide what to quote.
+url: https://www.vineelp.com
+baseurl: ""
 
 author:
   name: Vineel Pentrala
   email: vineelpentrala@gmail.com
+
+links:
+  cv: /resume.pdf
+  github: https://github.com/vineelx
+  linkedin: https://www.linkedin.com/in/vineelpentrala/
+  email: mailto:vineelpentrala@gmail.com
+
+markdown: kramdown
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

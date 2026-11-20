@@ -1,0 +1,97 @@
+# Projects shown on /work/ (and the first four on the home page).
+# Leave a link empty ("") to hide it. Set group: true for group projects.
+# color must keep white text readable (4.5:1 contrast or better).
+
+- section: trading systems
+  items:
+    - title: Cross-venue market-making engine
+      short: Market-making engine
+      stack: Rust
+      metric: "1.7µs"
+      desc: Kraken Futures and Uniswap v3 order books feeding one Avellaneda-Stoikov quoting model, with OMS and PnL.
+      color: "#005a9e"
+      group: false
+      featured: true
+      code: "#"  # TODO: link the repo
+      writeup: ""
+      report: ""
+    - title: Limit order book engine
+      short: Limit order book
+      stack: C++17
+      metric: "180ns"
+      desc: 4M messages/sec, 490ns p99, with a feed generator and an independent consistency checker.
+      color: "#107c10"
+      group: false
+      featured: true
+      code: "#"  # TODO: link the repo
+      writeup: ""
+      report: ""
+
+- section: quantitative research
+  items:
+    - title: Pricing a live Kalshi market
+      short: Kalshi pricing model
+      stack: Python
+      metric: "10/12"
+      desc: 200K-path Monte Carlo against the live book, up to 29.6¢ net edge.
+      color: "#c23400"
+      group: false
+      featured: true
+      code: "#"  # TODO: link the repo
+      writeup: ""
+      report: ""
+    - title: TSLA market microstructure
+      short: TSLA microstructure
+      stack: R
+      metric: "7M"
+      desc: Nanosecond TAQ across 17 venues; spreads, event studies, PIN.
+      color: "#5c2d91"
+      group: true
+      featured: true
+      code: ""
+      writeup: ""
+      report: "#"  # TODO: link the report PDF
+    - title: Regime detection with topology
+      short: Regime detection
+      stack: Python · R
+      metric: "2008"
+      desc: Persistent-homology turbulence index as a SPY/T-bill overlay. Stevens project sponsored by Bank of America.
+      color: "#00756a"
+      group: false
+      featured: false
+      code: https://github.com/vineelx/QWIM-Market-Regimes
+      writeup: ""
+      report: ""
+    - title: Sparse index tracking, S&P 100
+      short: Index tracking
+      stack: Python
+      metric: "−91%"
+      desc: L0+L2 tracker with 5–30 names, lower out-of-sample tracking error than dense least squares.
+      color: "#1e6a85"
+      group: false
+      featured: false
+      code: "#"  # TODO: link the repo
+      writeup: ""
+      report: ""
+    - title: Factor long-short allocation
+      short: Factor allocation
+      stack: Python
+      metric: "5"
+      desc: Beta-constrained portfolios on 12 ETFs across five market regimes, 2007–2024.
+      color: "#8b5e00"
+      group: false
+      featured: false
+      code: ""
+      writeup: ""
+      report: "#"  # TODO: link the report PDF
+    - title: American options, SMCI
+      short: SMCI options
+      stack: R
+      metric: "3×"
+      desc: Binomial tree with a control variate that cut tree steps 3×, plus a daily delta hedge.
+      color: "#b4009e"
+      group: false
+      featured: false
+      code: ""
+      writeup: ""
+      report: "#"  # TODO: link the report PDF

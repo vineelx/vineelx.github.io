@@ -43,7 +43,7 @@ is_section: true
 
 <section class="stack" id="contact" style="width: 100%">
 <h2 class="h2">contact</h2>
-<form class="form" action="https://formspree.io/f/mldleqpp" method="POST">
+<form class="form" id="contact-form" action="https://formspree.io/f/mldleqpp" method="POST">
 <label for="c-name">name</label>
 <input id="c-name" name="name" autocomplete="name" required>
 <label for="c-email">email</label>
@@ -52,7 +52,26 @@ is_section: true
 <textarea id="c-msg" name="message" rows="5" required></textarea>
 <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none">
 <button type="submit">send</button>
+<p id="form-status" class="form-status" role="status" aria-live="polite"></p>
 </form>
+<script>
+// Send the form in the background so visitors stay on the page.
+// Without JavaScript it still works, just with Formspree's own thank-you page.
+document.getElementById('contact-form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  var form = e.target, status = document.getElementById('form-status'), btn = form.querySelector('button');
+  btn.disabled = true; btn.textContent = 'sending…'; status.textContent = '';
+  try {
+    var res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+    if (!res.ok) throw new Error(res.status);
+    form.reset();
+    status.textContent = "Thanks, your message is on its way. I'll get back to you soon.";
+  } catch (err) {
+    status.textContent = 'Something went wrong. Please email me at vineelpentrala@gmail.com.';
+  }
+  btn.disabled = false; btn.textContent = 'send';
+});
+</script>
 </section>
 
 </div>

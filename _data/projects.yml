@@ -12,7 +12,7 @@
       color: "#005a9e"
       group: false
       featured: true
-      code: "#"  # TODO: link the repo
+      code: ""
       writeup: ""
       report: ""
     - title: Limit order book engine
@@ -23,7 +23,7 @@
       color: "#107c10"
       group: false
       featured: true
-      code: "#"  # TODO: link the repo
+      code: ""
       writeup: ""
       report: ""
 
@@ -37,9 +37,9 @@
       color: "#c23400"
       group: false
       featured: true
-      code: "#"  # TODO: link the repo
+      code: ""
       writeup: ""
-      report: ""
+      report: /files/reports/kalshi-pricing.pdf
     - title: TSLA market microstructure
       short: TSLA microstructure
       stack: R
@@ -50,7 +50,7 @@
       featured: true
       code: ""
       writeup: ""
-      report: "#"  # TODO: link the report PDF
+      report: /files/reports/tsla-microstructure.pdf
     - title: Regime detection with topology
       short: Regime detection
       stack: Python · R
@@ -68,30 +68,30 @@
       metric: "−91%"
       desc: L0+L2 tracker with 5–30 names, lower out-of-sample tracking error than dense least squares.
       color: "#1e6a85"
-      group: false
+      group: true
       featured: false
-      code: "#"  # TODO: link the repo
+      code: ""
       writeup: ""
-      report: ""
+      report: /files/reports/sparse-index-tracking.pdf
     - title: Factor long-short allocation
       short: Factor allocation
       stack: Python
       metric: "5"
       desc: Beta-constrained portfolios on 12 ETFs across five market regimes, 2007–2024.
       color: "#8b5e00"
-      group: false
+      group: true
       featured: false
       code: ""
       writeup: ""
-      report: "#"  # TODO: link the report PDF
+      report: /files/reports/factor-long-short.pdf
     - title: American options, SMCI
       short: SMCI options
       stack: R
       metric: "3×"
       desc: Binomial tree with a control variate that cut tree steps 3×, plus a daily delta hedge.
       color: "#b4009e"
-      group: false
+      group: true
       featured: false
       code: ""
       writeup: ""
-      report: "#"  # TODO: link the report PDF
+      report: /files/reports/smci-american-options.pdf
